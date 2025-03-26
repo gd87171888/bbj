@@ -1,0 +1,129 @@
+/* 科技感主题变量 */
+:root {
+    --primary: #00f0ff;
+    --secondary: #ff4dff;
+    --accent: #00ff9d;
+    --dark: #0a0a1a;
+    --light: #e0e0ff;
+}
+
+/* 基础样式 */
+body {
+    background-color: var(--dark);
+    color: var(--light);
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+/* 科技感字体 */
+.tech-font {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* 3D卡片效果 */
+.tech-card {
+    background: rgba(15, 15, 35, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.tech-card:hover {
+    transform: translateY(-5px) rotateX(5deg);
+    box-shadow: 0 12px 40px rgba(0, 240, 255, 0.2);
+    border-color: var(--primary);
+}
+
+/* 霓虹效果 */
+.neon-text {
+    text-shadow: 0 0 5px var(--primary), 
+                 0 0 10px var(--primary),
+                 0 0 20px var(--primary);
+}
+
+.neon-accent {
+    text-shadow: 0 0 5px var(--accent),
+                 0 0 10px var(--accent);
+}
+
+/* 机械感装饰元素 */
+.gear-icon {
+    animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* 科技感按钮 */
+.tech-btn {
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    border: none;
+    color: var(--dark);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.tech-btn:hover::before {
+    opacity: 1;
+}
+
+.tech-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--accent), var(--primary));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Mobile First Styles */
+@media (max-width: 640px) {
+    .tech-btn {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 641px) and (max-width: 1023px) {
+    .tech-btn {
+        padding: 12px 20px;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    .tech-btn {
+        padding: 12px 24px;
+    }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .tech-card {
+        backdrop-filter: none;
+    }
+}
+
+/* 确保动画在移动设备上流畅 */
+@media (hover: none) {
+    .tech-card:hover {
+        transform: none;
+    }
+}

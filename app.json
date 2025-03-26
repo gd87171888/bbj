@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/services/list",
+    "pages/services/detail",
+    "pages/booking/form",
+    "pages/user/center"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#06b6d4",
+    "navigationBarTitleText": "百百家",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f8f9fa",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#06b6d4",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/assets/icons/home.png",
+        "selectedIconPath": "/assets/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/services/list",
+        "text": "服务",
+        "iconPath": "/assets/icons/service.png",
+        "selectedIconPath": "/assets/icons/service-active.png"
+      },
+      {
+        "pagePath": "pages/user/center",
+        "text": "我的",
+        "iconPath": "/assets/icons/user.png",
+        "selectedIconPath": "/assets/icons/user-active.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于预约服务时定位"
+    }
+  },
+  "requiredBackgroundModes": ["location"],
+  "useExtendedLib": {
+    "weui": true
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

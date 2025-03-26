@@ -1,0 +1,65 @@
+/* 悬浮动画 */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* 脉冲光效 */
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+.pulse-effect {
+    animation: pulse 3s ease-in-out infinite;
+}
+
+/* 电路板线条动画 */
+@keyframes circuit {
+    0% { stroke-dashoffset: 1000; }
+    100% { stroke-dashoffset: 0; }
+}
+
+.circuit-line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: circuit 10s linear infinite;
+}
+
+/* 机械齿轮动画 */
+@keyframes gear-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.gear-spin {
+    animation: gear-spin 12s linear infinite;
+}
+
+/* 3D翻转效果 */
+.flip-card {
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Tech animation container */
+.tech-animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
