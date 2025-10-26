@@ -6,6 +6,7 @@ function HomePage() {
                 <main className="flex-grow">
                     <HeroSection />
                     <ServiceGrid />
+                    <InteractiveZone />
                     <TechFeatures />
                     <BookingPanel />
                 </main>
