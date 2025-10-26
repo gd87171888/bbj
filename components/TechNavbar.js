@@ -47,6 +47,10 @@ function TechNavbar() {
                             <span className="mr-2"><i className="fas fa-cogs"></i></span>
                             <span>智能服务</span>
                         </a>
+                        <a href="#interactive" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center text-sm lg:text-base">
+                            <span className="mr-2"><i className="fas fa-gamepad"></i></span>
+                            <span>互动体验</span>
+                        </a>
                         <a href="#booking" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center text-sm lg:text-base">
                             <span className="mr-2"><i className="fas fa-calendar-alt"></i></span>
                             <span>极速预约</span>
@@ -82,6 +86,13 @@ function TechNavbar() {
                                     onClick={() => setIsMenuOpen(false)}
                                 >
                                     <i className="fas fa-cogs mr-2"></i> 智能服务
+                                </a>
+                                <a 
+                                    href="#interactive" 
+                                    className="text-gray-300 hover:text-cyan-400 py-2 border-b border-gray-800"
+                                    onClick={() => setIsMenuOpen(false)}
+                                >
+                                    <i className="fas fa-gamepad mr-2"></i> 互动体验
                                 </a>
                                 <a 
                                     href="#booking" 
